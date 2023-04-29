@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>SweetStar - Pastelería</title>
+	<title>SweetStar - PasteleríA</title>
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/styles.css') }}">
 </head>
 <header>
