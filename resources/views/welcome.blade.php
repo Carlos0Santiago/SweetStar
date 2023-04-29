@@ -64,7 +64,7 @@
       </div>
       <div class="gallery-image">
         <img src="https://via.placeholder.com/300x200" alt="Imagen 8">
-        <span>Pastel de chocolate</span>
+        <span>Pastel de chocobanana</span>
       </div>
     </div>
   </div>
