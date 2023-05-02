@@ -23,3 +23,9 @@ Route::view('/Nosotros','About')-> name('Nosotros');
 Route::view('/Contacto','Contact')-> name('Contacto');
 //Log in
 Route::view('/Iniciar Sesión','Login')-> name('Iniciar Sesión');
+//Sucursales
+Route::view('/Sucursales','Sucursales')-> name('Sucursales');
+//Tabla Clientes
+Route::view('/Clientes','Clientes')-> name('Clientes');
+//Ticket
+Route::view('/Ticket','Ticket')-> name('Ticket');

@@ -5,7 +5,7 @@
   <title>Iniciar Sesion</title>
 </head>
 <body>
-<h2>Sweet Star</h2>
+<h1>Sweet Star</h1>
 <div class="container" id="container">
 	<div class="form-container sign-up-container">
 		<form action="#">
