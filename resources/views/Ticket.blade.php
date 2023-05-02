@@ -21,7 +21,7 @@
         <h2>Información de contacto</h2>
         <p> 
             Direccion : street city, state 0000</br>
-            Correo   : JohnDoe@gmail.com</br>
+            Correo   : JohnDoee@gmail.com</br>
         </p>
       </div>
     </div><!--End Invoice Mid-->
