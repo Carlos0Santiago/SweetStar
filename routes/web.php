@@ -21,3 +21,5 @@ Route::view('/Tienda','Store')-> name('Tienda');
 Route::view('/Nosotros','About')-> name('Nosotros');
 //Nosotros
 Route::view('/Contacto','Contact')-> name('Contacto');
+//Log in
+Route::view('/Iniciar Sesión','Login')-> name('Iniciar Sesión');
