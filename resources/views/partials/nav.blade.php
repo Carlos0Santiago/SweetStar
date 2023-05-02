@@ -1,8 +1,15 @@
-        <nav> 
-            <ul>
-				<li><a href="{{ route('Home') }}">Inicio</a></li>
-				<li><a href="{{ route('Tienda') }} ">Productos</a></li>
-				<li><a href="{{ route('Nosotros') }}">Nosotros</a></li>
-				<li><a href="{{ route('Contacto') }}">Contacto</a></li>
-			</ul>
-        </nav>
+<div class="navbar">
+    <a class="navlogo">SweetStar</a>
+
+    <div class="">
+      <span class="navlink selectedlink">Inicio</span>
+      <span class="navlink selectedlink">Productos</span>
+      <span class="navlink selectedlink">Nosotros</span>
+      <span class="navlink selectedlink">Contacto</span>
+    </div>
+
+    <div class="">
+      <button class="createbtn selectedbtn">Crear Cuenta</button>
+      <button class="createbtn selectedbtn">Iniciar Sesion</button>
+    </div>
+  </div>
