@@ -12,11 +12,13 @@ class ArticuloController extends Controller
     public function index () {
     
         // Llamar al procedimiento almacenado
-        $productos = DB::select('exec [SP_Productos] @Op =ProductosTienda');
-    // dump($productos);
-    return view('Articulo/ArticuloLista', compact('productos'));            
+        $total = DB::select('exec [SP_Productos] @Op =ProductosTienda');
+        $stock = DB::select('exec [SP_Productos] @Op =StockTiendas');
+
+    // dump($stock);
+    return view('Articulo/ArticuloLista', compact('total','stock'));            
 }
-    
+
 
 }
 
