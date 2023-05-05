@@ -26,7 +26,7 @@ Auth::routes();
 
 ////////////////////////////////////////////////////BLOG-HOME////////////////////////////////////////////////////////
 //Inicio
-Route::view('/home','welcome')-> name('Home');
+Route::view('/home2','welcome')-> name('Home2');
 //Tienda
 Route::view('/Tienda','Store')-> name('Tienda');
 //Galeria
@@ -39,8 +39,7 @@ Route::view('/Contacto','Contact')-> name('Contacto');
 
 
 //Articulos
-// Route::view('/Articulo/Lista', 'Articulo.ArticuloLista')->name('ArticuloLista');
-Route::get('/Articulo/Lista/data', 'App\Http\Controllers\ArticuloController@index')->name('ArticuloLista');
+Route::get('/Articulo/Lista', 'App\Http\Controllers\ArticuloController@index')->name('ArticuloLista');
 
 
 
