@@ -13,11 +13,11 @@ use Illuminate\Support\Facades\Auth;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/', function () {
+Route::get('/Login', function () {
     if(!Auth::check()) {
         return view('auth/login');
     } else {
-        return redirect()->route('home');
+        return redirect()->route('/Articulo/Lista');
     }
 
 });
@@ -26,7 +26,8 @@ Auth::routes();
 
 ////////////////////////////////////////////////////BLOG-HOME////////////////////////////////////////////////////////
 //Inicio
-Route::view('/home2','welcome')-> name('Home2');
+Route::view('/','welcome')-> name('welcome');
+Route::view('/Welcome','home')-> name('Home');
 //Tienda
 Route::view('/Tienda','Store')-> name('Tienda');
 //Galeria
@@ -35,12 +36,16 @@ Route::view('/Nosotros','About')-> name('Nosotros');
 Route::view('/Contacto','Contact')-> name('Contacto');
 
 
+Route::get('/usuario/Add', 'App\Http\Controllers\UsuarioController@UsuerAdd')->name('usuarioRegistro');
+Route::post('/usuario/Add', 'App\Http\Controllers\UsuarioController@UserCreate')->name('usuarioRegistro');
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 //Articulos
 Route::get('/Articulo/Lista', 'App\Http\Controllers\ArticuloController@index')->name('ArticuloLista');
-
+//Inventario
+Route::get('/Inventario/Lista', 'App\Http\Controllers\ArticuloController@index')->name('InventarioLista');
 
 
 //Provedores

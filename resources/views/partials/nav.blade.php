@@ -9,7 +9,7 @@
     </div>
 
     <div class="">
-      <button class="createbtn selectedbtn">Crear Cuenta</button>
-      <button class="createbtn selectedbtn">Iniciar Sesion</button>
+      <button onClick="location.href='/usuario/Add';" class="createbtn selectedbtn">Crear Cuenta</button>
+      <button onClick="location.href='/Login';" class="createbtn selectedbtn">Iniciar Sesion</button>
     </div>
   </div>

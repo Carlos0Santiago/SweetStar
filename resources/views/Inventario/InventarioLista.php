@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Articulos</title>
+  <title>Inventario</title>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css'>
   <link rel='stylesheet' href='https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css'>
   <link rel='stylesheet' href='https://cdn.datatables.net/buttons/1.7.0/css/buttons.dataTables.min.css'>
@@ -13,7 +13,7 @@
 <body>
 
 <div class="title">
-  <h1>Articulos</h1>
+  <h1>Inventario</h1>
 
   <div class="table-responsive" style="text-transform: uppercase;">
     <ul class="nav nav-pills" id="tabsExp" role="tablist">
@@ -26,6 +26,7 @@
     </ul>
 </div>
   <div class="container mt-5">
+  <button id="btnAdd" class="btn btn-primary mb-3">Añadir Articulo</button>
     <table id="total" class="table table-striped table-bordered" cellspacing="0" width="100%">
     <thead>
         <tr>
@@ -36,6 +37,7 @@
           <th>P/Venta </th>
           <th>Disponibles</th>   
           <th>Sucursal</th>   
+          <th>Acciones</th>
 
         </tr>
       </thead>
@@ -50,6 +52,7 @@
           <td>{{$Articulo->precio_venta}}</td>
           <td>{{$Articulo->stock_producto}}</td>
           <td>{{$Articulo->nombre_sucursal}}</td>
+<td>2</td>
 
   </tr>
   @endforeach
@@ -289,7 +292,11 @@ for (var i = 0; i < tabs.length; i++) {
         align-items: center;
         height: 5vh;
     }
- 
+    #btnAdd {
+  position: relative;
+  left: 490px;
+  top: 10px;
+}
 
 .blue-bg {
   background-color: blue;
