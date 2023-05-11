@@ -2,10 +2,10 @@
     <a class="navlogo">SweetStar</a>
 
     <div class="">
-      <span class="navlink selectedlink">Inicio</span>
-      <span class="navlink selectedlink">Productos</span>
-      <span class="navlink selectedlink">Nosotros</span>
-      <span class="navlink selectedlink">Contacto</span>
+      <span onClick="location.href='/';"  class="navlink selectedlink">Inicio</span>
+      <span onClick="location.href='/Productos';"  class="navlink selectedlink">Productos</span>
+      <span  onClick="location.href='/Nosotros';" class="navlink selectedlink">Nosotros</span>
+      <span  onClick="location.href='/Contacto';"  class="navlink selectedlink">Contacto</span>
     </div>
 
     <div class="">

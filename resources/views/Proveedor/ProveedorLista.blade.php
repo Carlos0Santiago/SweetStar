@@ -6,7 +6,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Articulos</title>
+  <title>Proveedores</title>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css'>
   <link rel='stylesheet' href='https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css'>
   <link rel='stylesheet' href='https://cdn.datatables.net/buttons/1.7.0/css/buttons.dataTables.min.css'>
@@ -17,84 +17,32 @@
 <body>
 
 <div class="title">
-  <h1>Articulos</h1>
+  <h1>Proveedores</h1>
 
-  <div class="table-responsive" style="text-transform: uppercase;">
-    <ul class="nav nav-pills" id="tabsExp" role="tablist">
-        <li class="nav-item">
-        <a id="liTotal" class="nav-link active blue-bg" data-bs-toggle="tab" href="#total" role="tab" aria-controls="total" aria-selected="true">Total</a>
-        </li>
-        <li class="nav-item">
-            <a id="liStock" class="nav-link" data-bs-toggle="tab" href="#stock" role="tab" aria-controls="stock" aria-selected="false">Stock</a>
-        </li>
-    </ul>
-</div>
+
   <div class="container mt-5">
     <table id="total" class="table table-striped table-bordered" cellspacing="0" width="100%">
     <thead>
         <tr>
         <th>#</th>
-          <th>Producto</th>
-          <th>Categoria</th>
-          <th>P/Provedor</th>
-          <th>P/Venta </th>
-          <th>Disponibles</th>   
-          <th>Sucursal</th>   
-
+          <th>Nombre</th>
+          <th>Direccion</th>
+          <th>Telefono</th>
         </tr>
       </thead>
       <tbody>
 
-@foreach ($total as $Articulo)
+@foreach ($proveedor as $listproveedor)
       <tr>
-          <td>{{$Articulo->id_producto}}</td>
-          <td>{{$Articulo->nombre_producto}}</td>
-          <td>{{$Articulo->categoria}}</td>
-          <td>{{$Articulo->precio_proveedor}}</td>
-          <td>{{$Articulo->precio_venta}}</td>
-          <td>{{$Articulo->stock_producto}}</td>
-          <td>{{$Articulo->nombre_sucursal}}</td>
+         <td>{{$listproveedor->id_proveedor}}</td>
+          <td>{{$listproveedor->nombre}}</td>
+          <td>{{$listproveedor->direccion}}</td>
+          <td>{{$listproveedor->telefono}}</td>
+
 
   </tr>
   @endforeach
 </tbody>
-    </table>
-
-    <table id="stock" class="table table-striped table-bordered" cellspacing="0" width="100%">
-      <thead>
-        <tr>
-        <th>#</th>
-          <th>Producto</th>
-          <th>Categoria</th>
-          <th>P/Provedor</th>
-          <th>P/Venta </th>
-          <th>Disponibles</th>      
-          <th>Sucursal</th>
-          <th>Direccion </th>
-          <th>Horario </th>
-
-        </tr>
-      </thead>
-      <tbody>
-      @foreach ($stock as $Fullstock)
-      <tr>
-          <td>{{$Fullstock->id_producto}}</td>
-          <td>{{$Fullstock->nombre_producto}}</td>
-          <td>{{$Fullstock->categoria}}</td>
-          <td>{{$Fullstock->precio_proveedor}}</td>
-          <td>{{$Fullstock->precio_venta}}</td>
-          <td>{{$Fullstock->stock_producto}}</td>
-          <td>{{$Fullstock->nombre_sucursal}}</td>
-          <td>{{$Fullstock->direccion_sucursal}}</td>
-          <td>{{$Fullstock->horario_sucursal}}</td>
-
-
-  </tr>
-  @endforeach
-      </tbody>
-    </table>
-
-
 
     
   </div>
@@ -188,85 +136,10 @@
 
   });
 
-  $('#stock').DataTable( {
-    dom: 'Bfrtip',
-    buttons: [
-      {
-        extend: 'copy',
-        text: 'Copiar',
-        className: 'btn btn-secondary btn-stock'
-        
-      },
-      {
-        extend: 'csv',
-        text: 'CSV',
-        className: 'btn btn-secondary btn-stock'
-      },
-      {
-        extend: 'excel',
-        text: 'Excel',
-        className: 'btn btn-secondary btn-stock'
-      },
-      {
-        extend: 'pdf',
-        text: 'PDF',
-        className: 'btn btn-secondary btn-stock'
-      },
-      {
-        extend: 'print',
-        text: 'Imprimir',
-        className: 'btn btn-secondary btn-stock'
-      }
-    ],
-    language: spanish // Usar los textos en español definidos arriba
 
-  });
-
-
-  // Oculta la tabla de  por defecto y sus botones
-  $('#stock').hide();
-  $('.btn-stock').hide();
-  // entries
-  $('#stock_wrapper').hide();
-
-
-  // Al hacer click en el enlace  muestra la tabla2 correspondiente y sus botones
-  $('#liTotal').on('click', function() {
-    $('#stock').hide();
-    $('#total').show();
-    $('#total_wrapper').show();
-    $('#stock_wrapper').hide();
-
-    
-
-  });
-    
-  // Al hacer click en el enlace muestra la tabla1 correspondiente y sus botones
-  $('#liStock').on('click', function() {
-    $('#total').hide();
-    $('#total_wrapper').hide();
-    $('#stock').show();
-    $('#stock_wrapper').show();
-    $('.btn-stock').show();
-
-
-  });
 });
 
 
-// dynamic color tab animation
-var tabs = document.querySelectorAll('.nav-link');
-
-for (var i = 0; i < tabs.length; i++) {
-  tabs[i].addEventListener('click', function(event) {
-    var currentActive = document.querySelector('.nav-link.active');
-    currentActive.classList.remove('active');
-    currentActive.classList.remove('blue-bg');
-
-    this.classList.add('active');
-
-  });
-}
 
 
 

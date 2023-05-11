@@ -17,7 +17,7 @@ Route::get('/Login', function () {
     if(!Auth::check()) {
         return view('auth/login');
     } else {
-        return redirect()->route('/Articulo/Lista');
+        return redirect()->route('/home');
     }
 
 });
@@ -44,12 +44,12 @@ Route::post('/usuario/Add', 'App\Http\Controllers\UsuarioController@UserCreate')
 
 //Articulos
 Route::get('/Articulo/Lista', 'App\Http\Controllers\ArticuloController@index')->name('ArticuloLista');
-//Inventario
-Route::get('/Inventario/Lista', 'App\Http\Controllers\ArticuloController@index')->name('InventarioLista');
-
-
+//Cliente
+Route::get('/Cliente/Lista', 'App\Http\Controllers\ClienteController@index')->name('ClienteLista');
+//Empleado
+Route::get('/Empleado/Lista', 'App\Http\Controllers\EmpleadoController@index')->name('EmpleadoLista');
 //Provedores
-Route::view('/Provedores/Lista', 'Provedores.ProvedoresLista')->name('ListaProvedores');
+Route::get('/Proveedor/Lista', 'App\Http\Controllers\ProveedorController@index')->name('ProveedorLista');
 
 
 //examples
