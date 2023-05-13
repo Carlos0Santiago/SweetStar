@@ -54,6 +54,9 @@ Route::post('/EmpleadoActualizar/{id}', 'App\Http\Controllers\EmpleadoController
 
 //Provedores
 Route::get('/Proveedor/Lista', 'App\Http\Controllers\ProveedorController@index')->name('ProveedorLista');
+//Provedores
+Route::get('/Venta/Lista', 'App\Http\Controllers\ProveedorController@index')->name('VentaLista');
+
 
 
 //examples

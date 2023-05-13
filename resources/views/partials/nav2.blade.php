@@ -11,6 +11,8 @@
       <span  onClick="location.href='/Proveedor/Lista';" class="navlink selectedlink">Provedores</span>
       <span onClick="location.href='/Cliente/Lista';" class="navlink selectedlink">Clientes</span>
       <span onClick="location.href='/Empleado/Lista';" class="navlink selectedlink">Empleados</span>
+      <span onClick="location.href='/Venta/Lista';" class="navlink selectedlink">Venta</span>
+
     </div>
 
 <li class="nav-item dropdown">
