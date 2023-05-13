@@ -48,6 +48,10 @@ Route::get('/Articulo/Lista', 'App\Http\Controllers\ArticuloController@index')->
 Route::get('/Cliente/Lista', 'App\Http\Controllers\ClienteController@index')->name('ClienteLista');
 //Empleado
 Route::get('/Empleado/Lista', 'App\Http\Controllers\EmpleadoController@index')->name('EmpleadoLista');
+Route::delete('/empleado/eliminar/{id}', 'App\Http\Controllers\EmpleadoController@eliminar')->name('EmpleadoEliminar');
+Route::get('/EmpleadoEditar/{id}', 'App\Http\Controllers\EmpleadoController@editar')->name('EmpleadoEditar');
+Route::post('/EmpleadoActualizar/{id}', 'App\Http\Controllers\EmpleadoController@actualizar')->name('EmpleadoActualizar');
+
 //Provedores
 Route::get('/Proveedor/Lista', 'App\Http\Controllers\ProveedorController@index')->name('ProveedorLista');
 
